@@ -21,12 +21,8 @@ eval "echo $sudoPW | $command git"
 echo "Installing rake"
 eval "echo $sudoPW | $command rake"
 
-echo "Cloning and installing maximum-awesome"
-eval "git clone https://github.com/square/maximum-awesome"
-cd maximum-awesome
-eval "rake"
-cd ..
-eval "echo $sudoPW | sudo rm -r maximum-awesome"
+echo "Installing oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Installing node.js"
 eval "echo $sudoPW | $command node"
